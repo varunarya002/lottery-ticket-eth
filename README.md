@@ -1,1 +1,1 @@
-Lotter DAPP using Ethereum and React
+Lottery DAPP using Ethereum and React
