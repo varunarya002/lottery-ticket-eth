@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 
 declare global {
-    interface Window { web3: any, ethereum: any }
+    interface Window { web3: Web3, ethereum: any }
 }
 window.web3 = window.web3 || {};
 

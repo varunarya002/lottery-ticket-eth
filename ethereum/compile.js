@@ -1,3 +1,5 @@
+export let evm = undefined;
+export let abi = undefined;
 const path = require("path");
 const fs = require("fs");
 const solc = require("solc");
@@ -21,5 +23,6 @@ const input = {
   },
 };
 const output = JSON.parse(solc.compile(JSON.stringify(input)));
- 
+
+output.contracts["Lottery.sol"].Lottery = undefined;
 module.exports = output.contracts["Lottery.sol"].Lottery;

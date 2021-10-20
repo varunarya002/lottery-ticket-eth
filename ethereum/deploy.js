@@ -3,9 +3,9 @@ const Web3 = require('web3');
 
 const compiledFile = require('./compile');
 
-const interface = compiledFile.abi;
+const custom_interface = compiledFile.abi;
 const bytecode = compiledFile.evm.bytecode.object;
-console.log("INTERFACE", interface);
+console.log("INTERFACE", custom_interface);
 
 const mnemonicPhrase = 'vocal rate carbon child scout dutch consider base deer whale prevent sell';
 const provider = new HDWalletProvider({
@@ -21,10 +21,10 @@ const deploy = async () => {
 
   console.log('Attempting to deploy from account', accounts[0]);
 
-  const result = await new web3.eth.Contract(interface)
+  const result = await new web3.eth.Contract(custom_interface)
     .deploy({ data: '0x' + bytecode })
-    .send({ gas: '1000000', from: accounts[0] });
+    .send({ gas: 1000000, from: accounts[0] });
 
   console.log('Contract deployed to', result.options.address);
 };
-deploy();
+deploy().then(console.log);

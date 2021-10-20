@@ -1,7 +1,9 @@
-import { web3 } from './web3';
+import {web3} from './web3';
+import {AbiItem} from "web3-utils";
 
 const address = '0x4DEb872877Ad364EEb354e9d37Dd5d89408C074D';
-const abi: any = [
+
+const abi: AbiItem[] = [
     {
         inputs: [],
         stateMutability: 'nonpayable',
@@ -17,14 +19,14 @@ const abi: any = [
     {
         inputs: [],
         name: 'getPlayers',
-        outputs: [{ name: '', type: 'address' }],
+        outputs: [{name: '', type: 'address'}],
         stateMutability: 'view',
         type: 'function'
     },
     {
         inputs: [],
         name: 'manager',
-        outputs: [{ name: '', type: 'address' }],
+        outputs: [{name: '', type: 'address'}],
         stateMutability: 'view',
         type: 'function'
     },
@@ -36,15 +38,15 @@ const abi: any = [
         type: 'function'
     },
     {
-        inputs: [{ name: '', type: 'uint256' }],
+        inputs: [{name: '', type: 'uint256'}],
         name: 'players',
-        outputs: [{ name: '', type: 'address' }],
+        outputs: [{name: '', type: 'address'}],
         stateMutability: 'view',
         type: 'function'
     }
 ];
 
-const abi2:any = [
+const abi2: AbiItem[] = [
     {
         inputs: [],
         stateMutability: 'nonpayable',
@@ -60,14 +62,14 @@ const abi2:any = [
     {
         inputs: [],
         name: "getPlayers",
-        outputs: [{ internalType: "address payable[]", name: "", type: "address[]" }],
+        outputs: [{internalType: "address payable[]", name: "", type: "address[]"}],
         stateMutability: "view",
         type: "function"
     },
     {
         inputs: [],
         name: "manager",
-        outputs: [{ internalType: "address", name: "", type: "address" }],
+        outputs: [{internalType: "address", name: "", type: "address"}],
         stateMutability: "view",
         type: "function"
     },
@@ -79,9 +81,9 @@ const abi2:any = [
         type: "function"
     },
     {
-        inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        inputs: [{internalType: "uint256", name: "", type: "uint256"}],
         name: "players",
-        outputs: [{ internalType: "address payable", name: "", type: "address" }],
+        outputs: [{internalType: "address payable", name: "", type: "address"}],
         stateMutability: "view",
         type: "function"
     }
